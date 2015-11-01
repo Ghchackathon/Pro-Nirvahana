@@ -1,0 +1,32 @@
+<ion-view view-title="Login" align-title="left">
+    <ion-content style="background: url(img/bg2.jpg) center; background-size: cover;" ng-controller="LoginCtrl" scroll="false">
+        <div class="hero no-header flat">
+            <div class="content">
+                <div class="app-icon dark"></div>
+                <h2 style="color:white">Pro Nirvahana</h2>
+				<br>
+				<h5 style="color:red; font-style:bolder">{{loginData.ErrorMessage}}</h5>
+            </div>
+        </div>
+        <div class="list list-inset">
+			<label class="item item-input" style="background-color:#E0E0E0;">
+				<input type="text" placeholder="User Mail" ng-model="loginData.mail" ng-click="resetLoginFields()">
+			</label>
+		</div>
+		<div class="list list-inset">
+			<label class="item item-input" style="background-color:#EEEEEE;">
+				<input type="password" placeholder="Password" ng-model="loginData.password" ng-click="resetLoginFields()">
+			</label>
+		</div>
+        <div class="button-bar">
+            <a class="button button-full button-positive ink" ng-click="loginUser()">Login</a>
+            <a class="button button-full button-balanced ink" ng-click="forgotPassword()">Forgot Password</a>
+        </div>
+		<div class="button-bar">
+			<button ui-sref="app.signUp" class="button button-full button-assertive ink">SignUp</button>
+		</div>
+		<div class="button-bar">
+			<button ui-sref="app.register" class="button button-full button-energized ink">Register Organisation</button>
+		</div>
+    </ion-content>
+</ion-view>
